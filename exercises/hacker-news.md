@@ -19,7 +19,6 @@ Go through Hacker News thoroughly and get the flow. We're going to need at least
 ### Things to keep in mind
 
 - Go through Hacker News thoroughly and get the flow.
-- Make sure you are using PostgrsSQL
 - Create a seeds file so you have some data to work with. Use [Faker](https://github.com/joke2k/faker) and random numbers. (!!!! this will save you a lot of time when resetting your DB)
 - Work on your CSS skills - make your site as visually close to Hacker News as possible.
 - Make a simple user login / registration or integrate one of your other user modules.
@@ -28,3 +27,4 @@ Go through Hacker News thoroughly and get the flow. We're going to need at least
 
 ### BONUS:
 - Are your comments commentable? That is, can a user comment on a comment? If not, implement this feature! What knid of relation can we use to implement nested comments? Do some googling, but definitely, don't use any built in libraries. Build it from scratch!
+- Try to use PostgrsSQL
