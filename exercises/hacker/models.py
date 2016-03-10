@@ -26,7 +26,7 @@ class Post(models.Model):
 
 	def update_check(self):
 		if self.updated_at.minute == self.created_at.minute and self.updated_at.hour == self.created_at.hour and self.updated_at.day == self.created_at.day:
-					return False
+			return False
 		else:
 			return True
 
@@ -56,4 +56,4 @@ class Comment(models.Model):
 		self.updated_at = timezone.now()
 		if not self.id:
 			self.created_at = timezone.now()
-		super(Comments, self).save(*args, **kwargs)
+		super(Comment, self).save(*args, **kwargs)

@@ -1,0 +1,17 @@
+{% verbatim %}
+
+	<script id='create' type='x-tmpl-mustache'>
+<div class = 'create-fielder'>
+		<h3>Create Post </h3>
+	<form novalidate class="create-post-form">
+		<input type="hidden" name="csrfmiddlewaretoken" value={{{ csrftoken }}}>
+		{{{ form }}}
+		<input class='submit-post' type="Submit" value="Submit">
+	</form>
+	<form class="cancel-form">
+		<input type="submit" value="Cancel">
+	</form>
+</div>
+	</script>
+
+{%endverbatim%}

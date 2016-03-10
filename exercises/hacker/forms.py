@@ -11,5 +11,6 @@ class CreatePost(forms.ModelForm):
         ]
 
         widgets = {
+        	# "title":
             "content":Textarea(),
         }

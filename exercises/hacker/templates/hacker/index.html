@@ -6,12 +6,33 @@
 	<title>Hacker Clone</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+	<script src="{% static 'js/django_ajax.js' %}">	</script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+	<script src="static/js/validator.js"></script>
 	<script src="{% static 'js/main.js' %}"></script>
 	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<script src = "static/js/form_submit.js"></script>
+	<script src="static/js/date.j"s></script>
 </head>
 <body>
-	<button class='create-button' type='submit'>Do a thing?</button>
+	<button class='create-button' type='submit'>Create a new post</button>
 	<div class='create-field'></div>
-	<div class='content'></div>
+	<div class='content'>
+		{%for each in posts%}
+					<div class='card-panel blue lighten-5'>
+				<div><h5><a href="/blogs/edit/{{ each.slug }}">{{ each.title }}</a></h5></div>
+				<div class=><p>{{ each.content|linebreaks }}</p></div>
+			</div>
+			<div><p><i>Posted by {{ each.user }}</i></p></div>
+			<div class='timestamp'><p class='timemargin'>{{ each.created_at }}</p>
+				{% if each.update_check %}
+					<p>Updated at: {{ each.updated_at }}</p>
+				{%endif%}
+			</div>
+		{%endfor%}
+	</div>
+	{%include 'hacker/create.html'%}
+	{%include 'hacker/new_post.html'%}
 </body>
 </html>

@@ -1,0 +1,13 @@
+{% verbatim %}
+
+	<script id='new-post' type='x-tmpl-mustache'>
+		<div class='card-panel blue lighten-5'>
+			<div><h5><a href="/blogs/edit/{{{ slug }}}">{{{ title }}}</a></h5></div>
+				<div class=><p>{{ content }}</p></div>
+			</div>
+			<div><p><i>posted by {{{ user }}}</i></p></div>
+			<div class='timestamp'><p class='timemargin'>{{{ created_at }}}</p>
+			</div>
+	</script>
+
+{%endverbatim%}
